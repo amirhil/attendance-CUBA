@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://lecturerEdit.caption"
+        focusComponent="form"
+        messagesPack="com.company.attendance.web.screens.lecturer">
+    <data>
+        <instance id="lecturerDc"
+                  class="com.company.attendance.entity.Lecturer">
+            <view extends="_local"/>
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="AUTO"
+                width="AUTO"
+                modal="true"
+                forceDialog="true"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="lecturerDc">
+            <column width="350px">
+                <textField id="lecNameField" property="lecName"/>
+                <textField id="lecAddField" property="lecAdd"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-attendance" insertBefore="administration" caption="mainMsg://menu_config.application-attendance">
+        <item screen="attendance_Student.browse" caption="mainMsg://menu_config.attendance_Student.browse"/>
+        <item screen="attendance_Lecturer.browse" caption="mainMsg://menu_config.attendance_Lecturer.browse"/>
+        <item screen="attendance_ClassScreen" caption="mainMsg://menu_config.attendance_ClassScreen"/>
+    </menu>
+</menu-config>

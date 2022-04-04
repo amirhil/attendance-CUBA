@@ -1,0 +1,2 @@
+alter table ATTENDANCE_CLASS_LECTURER_LINK add constraint FK_CLALEC_ON_LECTURER foreign key (LECTURER_ID) references ATTENDANCE_LECTURER(ID);
+alter table ATTENDANCE_CLASS_LECTURER_LINK add constraint FK_CLALEC_ON_CLASS foreign key (CLASS_ID) references ATTENDANCE_CLASS(ID);

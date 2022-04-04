@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://studentEdit.caption"
+        focusComponent="form"
+        messagesPack="com.company.attendance.web.screens.student">
+    <data>
+        <instance id="studentDc"
+                  class="com.company.attendance.entity.Student">
+            <view extends="_local"/>
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="studentDc">
+            <column width="350px">
+                <textField id="nameField" property="name"/>
+                <textField id="icNumberField" property="icNumber"/>
+                <textField id="phoneNumberField" property="phoneNumber"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

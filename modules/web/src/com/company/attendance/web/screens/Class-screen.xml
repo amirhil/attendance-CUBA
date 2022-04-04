@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://classScreen.caption"
+        messagesPack="com.company.attendance.web.screens">
+    <data>
+        <collection id="classesDc" class="com.company.attendance.entity.Class">
+            <view extends="_local"/>
+            <loader id="classesDl">
+                <query>
+                    <![CDATA[select e from attendance_Class e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <split orientation="horizontal" height="100%" width="200px">
+            <vbox spacing="true" height="100%" width="100%">
+                <groupBox spacing="true">
+                    <table id="classesTable" height="100px" width="200px" dataContainer="classesDc">
+                        <actions>
+                            <action id="create" type="create"/>
+                            <action id="edit" type="edit"/>
+                            <action id="remove" type="remove"/>
+                        </actions>
+                        <buttonsPanel alwaysVisible="true">
+                            <button id="classesTableCreateBtn" action="classesTable.create"/>
+                            <button id="classesTableEditBtn" action="classesTable.edit"/>
+                            <button id="classesTableRemoveBtn" action="classesTable.remove"/>
+                        </buttonsPanel>
+                        <columns>
+                            <column id="className"/>
+                        </columns>
+                    </table>
+                </groupBox>
+            </vbox>
+        </split>
+    </layout>
+</window>
